@@ -6,7 +6,6 @@
     const modalDesc = document.getElementById('modal-desc');
     const modalTitle = document.getElementById('modal-title');
     const modalCloseBtn = document.getElementById('modal-close-btn');
-
     const btnTips = document.getElementById('btn-tips');
     const btnBudget = document.getElementById('btn-budget');
     const btnBackFromTips = document.getElementById('btn-back-from-tips');
@@ -36,25 +35,26 @@
     const btnBackFromRules = document.getElementById('btn-back-from-rules');
     btnRules.addEventListener('click', () => {
       showSection(rulesPage);
+      document.querySelector('.background-figure')?.classList.add('rules-background-under');
       });
     btnBackFromRules.addEventListener('click', () => {
       showSection(home);
+      document.querySelector('.background-figure')?.classList.remove('rules-background-under');
     });
 
     function showSection(sectionToShow) {
-      [home, tipsPage, budgetPage].forEach(section => {
-        if (section === sectionToShow) {
-          section.style.display = 'flex';
-          section.setAttribute('aria-hidden', 'false');
-          section.focus?.();
-        } else {
-          section.style.display = 'none';
-          section.setAttribute('aria-hidden', 'true');
-        }
-      });
-      closeModal();
+  [home, tipsPage, budgetPage, rulesPage].forEach(section => {
+    if (section === sectionToShow) {
+      section.style.display = 'flex';
+      section.setAttribute('aria-hidden', 'false');
+      section.focus?.();
+    } else {
+      section.style.display = 'none';
+      section.setAttribute('aria-hidden', 'true');
     }
-
+  });
+  closeModal();
+}
     showSection(home);
 
     function populateTips() {
@@ -100,6 +100,7 @@
 
     btnBudget.addEventListener('click', () => {
       showSection(budgetPage);
+      document.querySelector('.background-figure')?.classList.add('background-under');
     });
 
     btnBackFromTips.addEventListener('click', () => {
@@ -108,6 +109,7 @@
 
     btnBackFromBudget.addEventListener('click', () => {
       showSection(home);
+      document.querySelector('.background-figure')?.classList.remove('background-under');
     });
 
     modalCloseBtn.addEventListener('click', closeModal);
