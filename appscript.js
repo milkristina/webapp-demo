@@ -30,6 +30,17 @@
       { title: "Money Habit", text: "A money habit is something you do with money regularly, like always saving a part of what you get. Good money habits help you grow up to be smart with money" },
     ];
 
+
+    const btnRules = document.getElementById('btn-rules');
+    const rulesPage = document.getElementById('rules-page');
+    const btnBackFromRules = document.getElementById('btn-back-from-rules');
+    btnRules.addEventListener('click', () => {
+      showSection(rulesPage);
+      });
+    btnBackFromRules.addEventListener('click', () => {
+      showSection(home);
+    });
+
     function showSection(sectionToShow) {
       [home, tipsPage, budgetPage].forEach(section => {
         if (section === sectionToShow) {

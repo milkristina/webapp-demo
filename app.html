@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tips and Budget Tracking</title>
+<title>FLIP Bugdeting game</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,6 +26,7 @@
     <section id="home" role="main">
       <button id="btn-tips" type="button" aria-label="Go to Tips section">TIPS</button>
       <button id="btn-budget" type="button" aria-label="Go to Budget Tracking section">MY BUDGET</button>
+      <button id="btn-rules" type="button" aria-label="Go to Rules section">RULES</button>
     </section>
     <section id="tips-page" role="main" aria-hidden="true">
       <div id="tips-list" role="list" aria-label="Tips list">
@@ -90,6 +91,23 @@
 
       <button class="back-btn" id="btn-back-from-budget" type="button" aria-label="Back to home">Back</button>
     </section>
+
+    <!-- New Rules section -->
+  <section id="rules-page" role="main" aria-hidden="true">
+    <h2>Game Rules</h2>
+    <div id="rules-content">
+      <p>Here are the rules of the game:</p>
+      <ul>
+        <li>Each player starts with a set budget.</li>
+        <li>Players can categorize their expenses as needs or wants.</li>
+        <li>Keep track of your income and expenses to stay within budget.</li>
+        <li>The goal is to manage your budget effectively and avoid overspending.</li>
+      </ul>
+    </div>
+    <footer id="rules-footer">
+      <button class="back-btn" id="btn-back-from-rules" type="button" aria-label="Back to home">Back</button>
+    </footer>
+  </section>
   </main>
 
   <!-- Modal pop-up -->
